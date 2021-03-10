@@ -1,2 +1,3 @@
 a = 'Hello'
-print(a)
+b = 'world'
+print(a, b)
