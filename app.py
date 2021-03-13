@@ -1,4 +1,4 @@
-a = 'SANbHUISOSdddI'
+a = 'RUSKIhffw'
 b = 'world'
 print(a, b)
 print("Version 2")
