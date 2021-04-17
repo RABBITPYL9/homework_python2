@@ -12,8 +12,9 @@ top4 = {}
 top5 = {}
 top6 = {}
 top7 = {}
+slov_tov = {}
 for element in slovar:
-    slovar = element['Браузер']#создаем список в словарь со всеми браузерами
+    slovar = element['Браузер']#создаем список в словарь со всеми 
     if slovar in slov_rez.keys(): 
         slov_rez[slovar] += 1
         for k, v in slov_rez.items():
@@ -43,13 +44,22 @@ for element in slovar:
         
     else:
         slov_rez[slovar] = 1
-
 print(top1)
 print(top2)
-print(top3)
-print(top4)
-print(top5)
-print(top6)
-print(top7)
 
-
+slovar1 = {}
+open_log1 = pandas.read_excel('logs.xlsx', sheet_name='log')
+log_data_dict1 = open_log1.to_dict(orient='records')
+slovar1 = log_data_dict1
+slov_rez1 = {}
+asd = {}
+slov_tov1 = {}
+for element1 in slovar1:
+    slovar1 = element1['Купленные товары']#создаем список в словарь со всеми
+    print(slovar1)
+    if slovar1 in slov_rez1.keys(): 
+        slov_rez1[slovar1] += 1
+        asd = slov_rez1
+    else:
+        slov_rez1[slovar1] = 1
+print(slov_rez1)
